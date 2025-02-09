@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/public/InstrumentSerif-Italic.woff2') format('woff2'),
+      url('/public/InstrumentSerif-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/public/InstrumentSerif-Regular.woff2') format('woff2'),
+      url('/public/InstrumentSerif-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #000000;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
+body {
+  color: #ffffff;
+  font-family: 'Instrument Serif', serif;
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+img {
+  min-width: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: row;
+  gap: 0.4em;
+  cursor: pointer;
+}
+
+.nav-icon {
+  width: 0.8em;
+}
+
+.logo {
+  width: 100%;
+  /* flex: 0 0 max(15%, 120px); */
+  height: auto;
+  object-fit: contain;
+}
+
+.illustration {
+  /* flex: 0 0 max(25%, 120px); */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  width: clamp(120px, 20%, 220px);
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  /* max-width: 100%; */
+}
+
+.background-image,
+.background-image > img {
+  object-fit: cover;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
